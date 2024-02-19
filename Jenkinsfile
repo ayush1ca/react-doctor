@@ -24,6 +24,8 @@ pipeline {
         // }
         stage('Deliver') {
             steps {
+                sh 'npm install -g serve'
+                sh 'npm install react-scripts'
                 sh 'npm run build'
                 sh 'cp -r * /var/www/html'
                 echo 'Visit http://localhost:3000 to see your Node.js/React application in actiomn.'
