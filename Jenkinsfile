@@ -28,7 +28,7 @@ pipeline {
                 // sh 'npm install react-scripts'
                 sh 'pwd'
                 sh 'npm run build --max-old-space-size=1024'
-                sh 'cp -r * /var/www/html'
+                sh 'sudo cp -r * /var/www/html'
                 echo 'Visit http://localhost:3000 to see your Node.js/React application in action.'
                 // sh 'npm start'
                 // input message: 'Finished using the web site? (Click "Proceed" to continue)'
