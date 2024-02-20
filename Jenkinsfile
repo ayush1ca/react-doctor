@@ -30,7 +30,7 @@ pipeline {
                 sh 'npm cache clean --force'
                 sh 'npm run build --max-old-space-size=1048'
                 sh 'cp -r * /var/www/html'
-                echo 'Visit http://localhost:3000 to see your Node.js/React application in actiomn.'
+                echo 'Visit http://localhost:3000 to see your Node.js/React application in acti.'
                 // sh 'npm start'
                 // input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 echo 'copy all filessss'
