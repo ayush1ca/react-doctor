@@ -26,6 +26,7 @@ pipeline {
             steps {
                 // sh 'npm install -g serve'
                 // sh 'npm install react-scripts'
+                sh 'pwd'
                 sh 'npm cache clean --force'
                 sh 'npm run build --max-old-space-size=1048'
                 sh 'cp -r * /var/www/html'
