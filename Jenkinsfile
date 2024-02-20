@@ -71,8 +71,8 @@ pipeline {
         stage('Deliver') {
             steps {
                 // sh 'npm run build --max-old-space-size=1024'
-                // sh 'scp -i ec2-testing.pem -r * ubuntu@3.89.49.116:/var/www/html'
-                sh 'cp -r * ubuntu@3.89.49.116:/var/www/html'
+                sh 'scp -i ec2-testing.pem -r * ubuntu@3.89.49.116:/var/www/html'
+                // sh 'cp -r * ubuntu@3.89.49.116:/var/www/html'
                 echo 'Visit http://localhost:3000 to see your Node.js/React application in action.'
                 // sh 'npm start'
                 // input message: 'Finished using the web site? (Click "Proceed" to continue)'
