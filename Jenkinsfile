@@ -71,7 +71,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 // sh 'npm run build --max-old-space-size=1024'
-                sh 'ssh-keyscan $TARGET_HOST >> ~/.ssh/known_hosts'
+                sh 'sudo ssh-keyscan $TARGET_HOST >> ~/.ssh/known_hosts'
                 sh 'scp -i $KEY_FILE -r * ubuntu@3.89.180.167:/'
                 // sh 'cp -r * ubuntu@3.89.49.116:/var/www/html'
                 echo 'Visit http://localhost:3000 to see your Node.js/React application in action.'
