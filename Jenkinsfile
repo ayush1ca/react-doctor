@@ -73,7 +73,7 @@ pipeline {
                 // sh 'npm run build --max-old-space-size=1024'
                 // sh 'sudo ssh-keyscan $TARGET_HOST >> ~/.ssh/known_hosts'
                 sh 'pwd && ls -la'
-                sh 'scp -r -i /home/ubuntu/ec2-testing.pem * ubuntu@3.89.180.167:/home/ubuntu/'
+                sh 'scp -r -i /var/lib/jenkins/ec2-testing.pem * ubuntu@3.89.180.167:/home/ubuntu/'
                 // sh 'cp -r * ubuntu@3.89.49.116:/var/www/html'
                 echo 'Visit http://localhost:3000 to see your Node.js/React application in action.'
                 // sh 'npm start'
